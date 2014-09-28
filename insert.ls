@@ -22,7 +22,7 @@ do
     err <- p.save
     defer.resolve!
 
-<- Q.allResolved defers
+<- Q.allSettled defers
 .then
 console.log \alldone
 process.exit 0
